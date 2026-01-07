@@ -1,0 +1,330 @@
+:root{
+  --bg:#0b1020;
+  --panel:#11172f;
+  --line:rgba(255,255,255,.12);
+  --text:#e7eaf3;
+  --blue:#3b82f6;
+  --blue2:#60a5fa;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  overflow-x:hidden;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+
+.header{
+  padding:20px;
+  border-bottom:1px solid var(--line);
+}
+
+.wrap{
+  max-width:1100px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.pill{
+  padding:6px 12px;
+  border-radius:999px;
+  background:rgba(255,255,255,.1);
+  font-weight:800;
+}
+
+.progress-wrap{
+  max-width:1100px;
+  margin:12px auto;
+  padding:0 20px;
+}
+
+.progress{
+  height:6px;
+  background:rgba(255,255,255,.1);
+  border-radius:99px;
+  overflow:hidden;
+}
+
+#bar{
+  height:100%;
+  width:0%;
+  background:linear-gradient(90deg,var(--blue),var(--blue2));
+}
+
+.progress-meta{
+  display:flex;
+  justify-content:space-between;
+  margin-top:6px;
+  font-weight:700;
+  font-size:13px;
+  opacity:.9;
+}
+
+/* KEY FIX: centre the whole worksheet so it doesn't stretch across ultra-wide screens */
+#wizard{
+  max-width:1100px;
+  margin:0 auto;
+  padding:0 20px;
+}
+
+.step{display:none;padding:20px 0}
+.step.active{display:block}
+
+.card{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:20px;
+}
+
+.card-head{
+  display:flex;
+  gap:14px;
+  margin-bottom:10px;
+}
+
+.num{
+  width:38px;
+  height:38px;
+  border-radius:12px;
+  background:linear-gradient(135deg,var(--blue),var(--blue2));
+  display:grid;
+  place-items:center;
+  font-weight:900;
+}
+
+.lead{opacity:.8}
+
+.grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);
+  gap:20px;
+}
+
+.bullets li{margin-bottom:8px}
+
+.alert{
+  margin:10px 0;
+  padding:10px;
+  border-radius:12px;
+  background:rgba(255,255,255,.08);
+}
+
+.check{
+  display:flex;
+  gap:8px;
+  font-weight:800;
+}
+
+/* Screenshot card */
+.shot{
+  border:1px solid var(--line);
+  border-radius:16px;
+  overflow:hidden;
+}
+
+.shot-top{
+  padding:8px 12px;
+  background:rgba(0,0,0,.25);
+  font-size:12px;
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+}
+
+.shot-top .file{
+  max-width:58%;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  text-align:right;
+}
+
+.shot img{
+  width:100%;
+  display:block;
+  cursor: zoom-in;
+}
+
+/* -------------------------------------------------------
+   BUTTON SYSTEM (restored & consistent)
+------------------------------------------------------- */
+.quick-links{
+  margin:10px 0 14px 0;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 16px;
+  border-radius:14px;
+  font-weight:900;
+  text-decoration:none;
+  border:1px solid rgba(255,255,255,.22);
+  background:rgba(255,255,255,.10);
+  color:#fff;
+  transition:transform .12s ease, background .12s ease, border-color .12s ease;
+}
+
+.btn:hover{
+  transform:translateY(-1px);
+  background:rgba(255,255,255,.16);
+  border-color:rgba(255,255,255,.30);
+}
+
+/* Video button: clearer + more attractive */
+.video-btn{
+  background:rgba(255,255,255,.22);
+  border:1px solid rgba(255,255,255,.45);
+}
+
+.video-btn:hover{
+  background:rgba(255,255,255,.30);
+  border-color:rgba(255,255,255,.55);
+}
+
+/* -------------------------------------------------------
+   SCRATCH BUTTON (contained – NOT full-width banner)
+------------------------------------------------------- */
+.scratch-launch{
+  display:flex;
+  justify-content:flex-start;
+  margin:10px 0 12px 0;
+}
+
+.scratch-btn{
+  width:auto;
+  max-width:320px;
+  min-width:240px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:4px;
+  padding:14px 18px;
+  border-radius:18px;
+  background:linear-gradient(135deg,#ffab19,#ff7a00);
+  color:#fff;
+  text-decoration:none;
+  font-weight:900;
+  font-size:18px;
+  box-shadow:0 12px 28px rgba(255,138,0,.30);
+  transition:transform .12s ease, box-shadow .12s ease;
+}
+
+.scratch-btn span{
+  font-size:13px;
+  font-weight:800;
+  opacity:.92;
+}
+
+.scratch-btn:hover{
+  transform:translateY(-1px);
+  box-shadow:0 16px 36px rgba(255,138,0,.36);
+}
+
+/* NAV */
+.nav{
+  position:sticky;
+  bottom:0;
+  background:var(--bg);
+  border-top:1px solid var(--line);
+  padding:12px 0;
+}
+
+.nav-inner{
+  max-width:1100px;
+  margin:0 auto;
+  padding:0 20px;
+  display:flex;
+  justify-content:space-between;
+}
+
+.nav button{
+  padding:10px 14px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,.18);
+  background:rgba(255,255,255,.10);
+  color:#fff;
+  font-weight:900;
+  cursor:pointer;
+}
+
+.nav button:hover{
+  background:rgba(255,255,255,.16);
+}
+
+.nav button.ghost{
+  background:rgba(255,255,255,.06);
+}
+
+/* LIGHTBOX */
+.no-scroll{overflow:hidden}
+
+.lightbox{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.75);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+}
+.lightbox.open{display:flex}
+
+.lightbox-inner{
+  background:#fff;
+  border-radius:18px;
+  max-width:1100px;
+  width:calc(100% - 30px);
+  max-height:90vh;
+  position:relative;
+  overflow:hidden;
+}
+
+.lightbox-img{
+  width:100%;
+  max-height:80vh;
+  object-fit:contain;
+  background:#fff;
+}
+
+.lightbox-caption{
+  padding:10px;
+  font-weight:800;
+  color:#111;
+  border-top:1px solid #ddd;
+}
+
+/* Close button is black so it always shows on white */
+.lightbox-close{
+  position:absolute;
+  top:10px;
+  right:10px;
+  width:42px;
+  height:42px;
+  border-radius:14px;
+  border:2px solid #000;
+  background:#000;
+  color:#fff;
+  font-weight:900;
+  cursor:pointer;
+  display:grid;
+  place-items:center;
+  z-index:10;
+}
+
+.lightbox-close:hover{
+  background:#222;
+}
+
+/* Mobile */
+@media (max-width: 900px){
+  .grid{ grid-template-columns:1fr; }
+  .scratch-btn{ max-width:100%; min-width:0; width:100%; }
+}

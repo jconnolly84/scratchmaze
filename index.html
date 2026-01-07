@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scratch Maze Game – Digital Worksheet</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="wrap">
+    <div>
+      <h1>Scratch Maze Game</h1>
+      <p>Follow each step carefully. Do not skip ahead.</p>
+    </div>
+    <div class="pill">Digital Worksheet</div>
+  </div>
+</header>
+
+<div class="progress-wrap">
+  <div class="progress">
+    <div id="bar"></div>
+  </div>
+  <div class="progress-meta">
+    <span id="counter">Step 1 of 10</span>
+    <span id="miniTitle">Sprites vs Backgrounds</span>
+  </div>
+</div>
+
+<main id="wizard">
+
+  <!-- STEP 1 -->
+  <section class="step active" data-title="Sprites vs Backgrounds">
+    <div class="card">
+      <div class="card-head">
+        <div class="num">1</div>
+        <div>
+          <h2>Before You Start: Sprites vs Backgrounds</h2>
+          <p class="lead">This is the biggest mistake students make — drawing the sprite on the stage.</p>
+        </div>
+      </div>
+
+      <div class="grid">
+        <!-- LEFT COLUMN -->
+        <div>
+
+          <!-- Scratch launcher -->
+          <div class="scratch-launch">
+            <a href="https://scratch.mit.edu/" target="_blank" rel="noopener" class="scratch-btn">
+              🚀 Open Scratch
+              <span>scratch.mit.edu</span>
+            </a>
+          </div>
+
+          <!-- Video help button -->
+          <div class="quick-links">
+            <a class="btn video-btn" href="https://www.youtube.com/watch?v=HwZaVjQAdWA&t=0s" target="_blank" rel="noopener">
+              ▶ Watch the video for this step
+            </a>
+          </div>
+
+          <ul class="bullets">
+            <li><strong>Sprites</strong> move and have code</li>
+            <li><strong>Backgrounds (Stage)</strong> are the maze levels</li>
+            <li>Sprites use the <strong>Costumes</strong> tab</li>
+            <li>Backgrounds use the <strong>Backdrops</strong> tab</li>
+          </ul>
+
+          <div class="alert">
+            If the tab says <strong>Backdrops</strong>, you are editing the stage — not a sprite.
+          </div>
+
+          <label class="check"><input type="checkbox"> I understand the difference</label>
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <figure class="shot">
+          <div class="shot-top">
+            <span>Screenshot</span>
+            <span class="file">step-01-sprite-vs-stage.png</span>
+          </div>
+          <img class="zoomable" src="img/step-01-sprite-vs-stage.png" alt="Sprite vs Stage tabs">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEP 2 -->
+  <section class="step" data-title="Hover for paintbrush">
+    <div class="card">
+      <div class="card-head">
+        <div class="num">2</div>
+        <div>
+          <h2>Create a Sprite the Correct Way</h2>
+          <p class="lead">Important: HOVER over the cat icon to reveal the paintbrush. Don’t click it directly.</p>
+        </div>
+      </div>
+
+      <div class="quick-links">
+        <a class="btn video-btn" href="https://www.youtube.com/watch?v=HwZaVjQAdWA&t=74s" target="_blank" rel="noopener">
+          ▶ Video 1 help (Sprite creation)
+        </a>
+      </div>
+
+      <div class="grid">
+        <div>
+          <ol class="bullets">
+            <li>Go to the Sprite area (bottom-right)</li>
+            <li><strong>HOVER</strong> over the cat face</li>
+            <li>Click the <strong>paintbrush</strong> (not the sprite library)</li>
+          </ol>
+
+          <div class="alert">
+            If a big library of premade sprites opens, you clicked (wrong). Close it and hover instead.
+          </div>
+
+          <label class="check"><input type="checkbox"> I used the paintbrush correctly</label>
+        </div>
+
+        <figure class="shot">
+          <div class="shot-top">
+            <span>Screenshot</span>
+            <span class="file">step-02-hover-paintbrush.png</span>
+          </div>
+          <img class="zoomable" src="img/step-02-hover-paintbrush.png" alt="Hover cat icon for paintbrush">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEP 3 -->
+  <section class="step" data-title="Set up project">
+    <div class="card">
+      <div class="card-head">
+        <div class="num">3</div>
+        <div>
+          <h2>Set Up the Project</h2>
+          <p class="lead">Delete the cat, log in, and name your project so it saves properly.</p>
+        </div>
+      </div>
+
+      <div class="quick-links">
+        <a class="btn video-btn" href="https://www.youtube.com/watch?v=HwZaVjQAdWA&t=25s" target="_blank" rel="noopener">
+          ▶ Video 1 help (Project setup)
+        </a>
+      </div>
+
+      <div class="grid">
+        <div>
+          <ul class="bullets">
+            <li>Log in to Scratch</li>
+            <li>Name the project: <strong>Maze Game</strong></li>
+            <li>Delete the Scratch cat sprite</li>
+          </ul>
+
+          <label class="check"><input type="checkbox"> Project is named + saved</label>
+        </div>
+
+        <figure class="shot">
+          <div class="shot-top">
+            <span>Screenshot</span>
+            <span class="file">step-03-name-delete-cat.png</span>
+          </div>
+          <img class="zoomable" src="img/step-03-name-delete-cat.png" alt="Name project and delete cat">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEP 4 -->
+  <section class="step" data-title="Draw the player sprite">
+    <div class="card">
+      <div class="card-head">
+        <div class="num">4</div>
+        <div>
+          <h2>Draw the Player Sprite</h2>
+          <p class="lead">Make a square sprite and centre it perfectly on the crosshair.</p>
+        </div>
+      </div>
+
+      <div class="quick-links">
+        <a class="btn video-btn" href="https://www.youtube.com/watch?v=HwZaVjQAdWA&t=90s" target="_blank" rel="noopener">
+          ▶ Video 1 help (Drawing + centring)
+        </a>
+      </div>
+
+      <div class="grid">
+        <div>
+          <ul class="bullets">
+            <li>Go to <strong>Costumes</strong></li>
+            <li>Outline: <strong>Invisible</strong></li>
+            <li>Fill: choose a colour (e.g., red)</li>
+            <li>Hold <strong>SHIFT</strong> to draw a perfect square</li>
+            <li>Move the square so its centre sits on the crosshair</li>
+          </ul>
+
+          <div class="alert">
+            If it isn’t centred, your sprite will move “wonky”.
+          </div>
+
+          <label class="check"><input type="checkbox"> My sprite is centred on the crosshair</label>
+        </div>
+
+        <figure class="shot">
+          <div class="shot-top">
+            <span>Screenshot</span>
+            <span class="file">step-04-centre-crosshairs.png</span>
+          </div>
+          <img class="zoomable" src="img/step-04-centre-crosshairs.png" alt="Centre sprite on crosshair">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEP 5 -->
+  <section class="step" data-title="Movement code">
+    <div class="card">
+      <div class="card-head">
+        <div class="num">5</div>
+        <div>
+          <h2>Add Basic Movement Code</h2>
+          <p class="lead">Green flag starts movement + arrow keys change direction.</p>
+        </div>
+      </div>
+
+      <div class="quick-links">
+        <a class="btn video-btn" href="https://www.youtube.com/watch?v=HwZaVjQAdWA&t=311s" target="_blank" rel="noopener">
+          ▶ Video 1 help (Movement code)
+        </a>
+      </div>
+
+      <div class="grid">
+        <div>
+          <ul class="bullets">
+            <li>Events: <strong>when green flag clicked</strong></li>
+            <li>Motion: <strong>go to x/y</strong> (start position)</li>
+            <li>Motion: <strong>point in direction</strong></li>
+            <li>Control: <strong>forever</strong> → Motion: <strong>move 2 steps</strong></li>
+            <li>Four <strong>IF</strong> blocks (not nested) for arrow keys → change direction</li>
+          </ul>
+
+          <div class="alert">
+            Don’t put the arrow-key IF blocks inside each other. Stack them underneath.
+          </div>
+
+          <label class="check"><input type="checkbox"> Arrow keys change direction correctly</label>
+        </div>
+
+        <figure class="shot">
+          <div class="shot-top">
+            <span>Screenshot</span>
+            <span class="file">step-06-movement-code.png</span>
+          </div>
+          <img class="zoomable" src="img/step-06-movement-code.png" alt="Movement code blocks">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEP 6 -->
+  <section class="step" data-title="Backdrops (levels)">
+    <div class="card">
+      <div class="card-head">
+        <div class="num">6</div>
+        <div>
+          <h2>Create Level Backdrops</h2>
+          <p class="lead">Make three maze levels on the Stage (Backdrops tab), each with a different finish square colour.</p>
+        </div>
+      </div>
+
+      <div class="quick-links">
+        <a class="btn video-btn" href="https://www.youtube.com/watch?v=gkcopKN1lac&t=43s" target="_blank" rel="noopener">
+          ▶ Video 2 help (Backdrops / levels)
+        </a>
+      </div>
+
+      <div class="grid">
+        <div>
+          <ul class="bullets">
+            <li>Click <strong>Stage</strong> → <strong>Backdrops</strong></li>
+            <li>Create: <strong>Level 1</strong>, <strong>Level 2</strong>, <strong>Level 3</strong></li>
+            <li>Walls: one wall colour (same across all levels)</li>
+            <li>Finish: different colour square at the end of each level</li>
+            <li>Levels should get harder each time</li>
+          </ul>
+
+          <label class="check"><input type="checkbox"> I have 3 backdrops named Level 1–3</label>
+        </div>
+
+        <figure class="shot">
+          <div class="shot-top">
+            <span>Screenshot</span>
+            <span class="file">step-08-wall-finish-colours.png</span>
+          </div>
+          <img class="zoomable" src="img/step-08-wall-finish-colours.png" alt="Backdrops levels">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEP 7 -->
+  <section class="step" data-title="Broadcasts + reset">
+    <div class="card">
+      <div class="card-head">
+        <div class="num">7</div>
+        <div>
+          <h2>Broadcasts: Level Switching + Reset on Wall</h2>
+          <p class="lead">Touching wall resets. Touching finish broadcasts “Level 2 / Level 3 / Winner”.</p>
+        </div>
+      </div>
+
+      <div class="quick-links">
+        <a class="btn video-btn" href="https://www.youtube.com/watch?v=FvWCJ98TyqM&t=178s" target="_blank" rel="noopener">
+          ▶ Video 3 help (Broadcasts)
+        </a>
+      </div>
+
+      <div class="grid">
+        <div>
+          <ul class="bullets">
+            <li>Looks: <strong>switch backdrop to Level 1</strong> at start</li>
+            <li>IF touching <strong>wall colour</strong> → go back to start</li>
+            <li>IF touching <strong>finish colour</strong> → broadcast Level 2/3/Winner</li>
+            <li>Use the <strong>pipette</strong> to pick colours exactly</li>
+          </ul>
+
+          <label class="check"><input type="checkbox"> Touching wall resets correctly</label>
+        </div>
+
+        <figure class="shot">
+          <div class="shot-top">
+            <span>Screenshot</span>
+            <span class="file">step-08-wall-finish-colours.png</span>
+          </div>
+          <img class="zoomable" src="img/step-08-wall-finish-colours-code.png" alt="Touching colour with pipette">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEP 8 -->
+  <section class="step" data-title="Winner screen">
+    <div class="card">
+      <div class="card-head">
+        <div class="num">8</div>
+        <div>
+          <h2>Winner Backdrop</h2>
+          <p class="lead">Make a “Winner” backdrop and switch to it when the game is completed.</p>
+        </div>
+      </div>
+
+      <div class="quick-links">
+        <a class="btn video-btn" href="https://www.youtube.com/watch?v=FvWCJ98TyqM&t=780s" target="_blank" rel="noopener">
+          ▶ Video 3 help (Winner screen)
+        </a>
+      </div>
+
+      <div class="grid">
+        <div>
+          <ul class="bullets">
+            <li>Create new backdrop: <strong>Winner</strong></li>
+            <li>Text tool: write “WINNER”</li>
+            <li>On Winner broadcast: switch backdrop → wait 4 seconds → switch back to Level 1</li>
+          </ul>
+
+          <label class="check"><input type="checkbox"> Winner screen appears then resets</label>
+        </div>
+
+        <figure class="shot">
+          <div class="shot-top">
+            <span>Screenshot</span>
+            <span class="file">step-12-broadcast-scripts.png</span>
+          </div>
+          <img class="zoomable" src="img/step-12-broadcast-scripts.png" alt="Broadcast scripts">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEP 9 -->
+  <section class="step" data-title="Obstacles">
+    <div class="card">
+      <div class="card-head">
+        <div class="num">9</div>
+        <div>
+          <h2>Add Obstacles (Hide / Show by Level)</h2>
+          <p class="lead">Obstacles should only appear on certain levels using broadcasts.</p>
+        </div>
+      </div>
+
+      <div class="quick-links">
+        <a class="btn video-btn" href="https://www.youtube.com/watch?v=r50jms-jWxw&t=308s" target="_blank" rel="noopener">
+          ▶ Video 4 help (Obstacles)
+        </a>
+      </div>
+
+      <div class="grid">
+        <div>
+          <ul class="bullets">
+            <li>Create obstacle sprite (rectangle)</li>
+            <li>Use wall colour (pipette) so it “matches”</li>
+            <li>When I receive Level 1 → hide</li>
+            <li>When I receive Level 2 → show + spin (slowly)</li>
+            <li>When I receive Level 3 / Winner → hide</li>
+          </ul>
+
+          <label class="check"><input type="checkbox"> Obstacle shows only on the right level</label>
+        </div>
+
+        <figure class="shot">
+          <div class="shot-top">
+            <span>Screenshot</span>
+            <span class="file">step-16-obstacle-spin.png</span>
+          </div>
+          <img class="zoomable" src="img/step-16-obstacle-spin.png" alt="Obstacle hide/show code">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEP 10 -->
+  <section class="step" data-title="Score">
+    <div class="card">
+      <div class="card-head">
+        <div class="num">10</div>
+        <div>
+          <h2>Add a Score</h2>
+          <p class="lead">Make a variable called Score and increase it when each level is completed.</p>
+        </div>
+      </div>
+
+      <div class="quick-links">
+        <a class="btn video-btn" href="https://www.youtube.com/watch?v=8Mt_uW5iBJE&t=25s" target="_blank" rel="noopener">
+          ▶ Video 5 help (Score)
+        </a>
+      </div>
+
+      <div class="grid">
+        <div>
+          <ul class="bullets">
+            <li>Variables → Make a variable: <strong>Score</strong></li>
+            <li>At start: <strong>set Score to 0</strong></li>
+            <li>At each finish: <strong>change Score by 1</strong></li>
+            <li>Challenge: Why might it not reset after Winner?</li>
+          </ul>
+
+          <label class="check"><input type="checkbox"> Score increases each level</label>
+        </div>
+
+        <figure class="shot">
+          <div class="shot-top">
+            <span>Screenshot</span>
+            <span class="file">step-19-score-bug.png</span>
+          </div>
+          <img class="zoomable" src="img/step-19-score-bug.png" alt="Score variable blocks">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <button id="prev" class="ghost">Back</button>
+    <button id="next">Next</button>
+  </div>
+</nav>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox" aria-hidden="true">
+  <div class="lightbox-inner" role="dialog" aria-modal="true">
+    <button class="lightbox-close" aria-label="Close">✕</button>
+    <img id="lightboxImg" class="lightbox-img" src="" alt="">
+    <div id="lightboxCaption" class="lightbox-caption"></div>
+  </div>
+</div>
+
+<script>
+  const steps = [...document.querySelectorAll(".step")];
+  const bar = document.getElementById("bar");
+  const counter = document.getElementById("counter");
+  const miniTitle = document.getElementById("miniTitle");
+  let current = 0;
+
+  function update(){
+    steps.forEach((s,i)=>s.classList.toggle("active",i===current));
+    bar.style.width=((current+1)/steps.length*100)+"%";
+    counter.textContent=`Step ${current+1} of ${steps.length}`;
+    miniTitle.textContent=steps[current].dataset.title||"";
+    window.scrollTo({top:0,behavior:"smooth"});
+  }
+
+  document.getElementById("next").onclick=()=>{ current = (current+1) % steps.length; update(); };
+  document.getElementById("prev").onclick=()=>{ if(current>0) current--; update(); };
+  update();
+
+  const lb = document.getElementById("lightbox");
+  const lbImg = document.getElementById("lightboxImg");
+  const lbCap = document.getElementById("lightboxCaption");
+
+  document.querySelectorAll(".zoomable").forEach(img=>{
+    img.addEventListener("click", ()=>{
+      lbImg.src = img.src;
+      lbCap.textContent = img.closest("figure")?.querySelector(".file")?.textContent || "";
+      lb.classList.add("open");
+      lb.setAttribute("aria-hidden","false");
+      document.body.classList.add("no-scroll");
+    });
+  });
+
+  document.querySelector(".lightbox-close").onclick = ()=>{
+    lb.classList.remove("open");
+    lb.setAttribute("aria-hidden","true");
+    document.body.classList.remove("no-scroll");
+  };
+
+  lb.addEventListener("click", (e)=>{
+    if(e.target === lb){
+      lb.classList.remove("open");
+      lb.setAttribute("aria-hidden","true");
+      document.body.classList.remove("no-scroll");
+    }
+  });
+</script>
+
+</body>
+</html>
