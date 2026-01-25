@@ -35,11 +35,20 @@
   <section class="step active" data-title="Sprites vs Backgrounds">
     <div class="card">
       <div class="card-head">
+
+      
+
         <div class="num">1</div>
         <div>
           <h2>Before You Start: Sprites vs Backgrounds</h2>
           <p class="lead">This is the biggest mistake students make — drawing the sprite on the stage.</p>
         </div>
+      </div>
+
+      <!-- Infographic Lightbox Trigger -->
+      <div class="infographic-wrap">
+        <img src="img/infographic.png" alt="Maze game infographic" class="infographic-thumb" onclick="openLightbox()">
+        <p class="hint">Click the infographic to enlarge</p>
       </div>
 
       <div class="grid">
@@ -87,7 +96,47 @@
     </div>
   </section>
 
-  <!-- STEP 2 -->
+  <!-- STEP 3 -->
+  <section class="step" data-title="Set up project">
+    <div class="card">
+      <div class="card-head">
+        <div class="num">3</div>
+        <div>
+          <h2>Set Up the Project</h2>
+          <p class="lead">Delete the cat, log in, and name your project so it saves properly.</p>
+        </div>
+      </div>
+
+      <div class="quick-links">
+        <a class="btn video-btn" href="https://www.youtube.com/watch?v=HwZaVjQAdWA&t=25s" target="_blank" rel="noopener">
+          ▶ Video 1 help (Project setup)
+        </a>
+      </div>
+
+      <div class="grid">
+        <div>
+          <ul class="bullets">
+            <li>Log in to Scratch</li>
+            <li>Name the project: <strong>Maze Game</strong></li>
+            <li>Delete the Scratch cat sprite</li>
+          </ul>
+
+          <label class="check"><input type="checkbox"> Project is named + saved</label>
+        </div>
+
+        <figure class="shot">
+          <div class="shot-top">
+            <span>Screenshot</span>
+            <span class="file">step-03-name-delete-cat.png</span>
+          </div>
+          <img class="zoomable" src="img/step-03-name-delete-cat.png" alt="Name project and delete cat">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  
+<!-- STEP 2 -->
   <section class="step" data-title="Hover for paintbrush">
     <div class="card">
       <div class="card-head">
@@ -130,45 +179,6 @@
     </div>
   </section>
 
-  <!-- STEP 3 -->
-  <section class="step" data-title="Set up project">
-    <div class="card">
-      <div class="card-head">
-        <div class="num">3</div>
-        <div>
-          <h2>Set Up the Project</h2>
-          <p class="lead">Delete the cat, log in, and name your project so it saves properly.</p>
-        </div>
-      </div>
-
-      <div class="quick-links">
-        <a class="btn video-btn" href="https://www.youtube.com/watch?v=HwZaVjQAdWA&t=25s" target="_blank" rel="noopener">
-          ▶ Video 1 help (Project setup)
-        </a>
-      </div>
-
-      <div class="grid">
-        <div>
-          <ul class="bullets">
-            <li>Log in to Scratch</li>
-            <li>Name the project: <strong>Maze Game</strong></li>
-            <li>Delete the Scratch cat sprite</li>
-          </ul>
-
-          <label class="check"><input type="checkbox"> Project is named + saved</label>
-        </div>
-
-        <figure class="shot">
-          <div class="shot-top">
-            <span>Screenshot</span>
-            <span class="file">step-03-name-delete-cat.png</span>
-          </div>
-          <img class="zoomable" src="img/step-03-name-delete-cat.png" alt="Name project and delete cat">
-        </figure>
-      </div>
-    </div>
-  </section>
-
   <!-- STEP 4 -->
   <section class="step" data-title="Draw the player sprite">
     <div class="card">
@@ -181,7 +191,7 @@
       </div>
 
       <div class="quick-links">
-        <a class="btn video-btn" href="https://www.youtube.com/watch?v=HwZaVjQAdWA&t=90s" target="_blank" rel="noopener">
+        <a class="btn video-btn" href="https://www.youtube.com/watch?v=HwZaVjQAdWA&t=115s" target="_blank" rel="noopener">
           ▶ Video 1 help (Drawing + centring)
         </a>
       </div>
@@ -194,7 +204,11 @@
             <li>Fill: choose a colour (e.g., red)</li>
             <li>Hold <strong>SHIFT</strong> to draw a perfect square</li>
             <li>Move the square so its centre sits on the crosshair</li>
-          </ul>
+          
+            <li><strong>Check:</strong> Tab says <strong>Costumes</strong> (if it says Backdrops, you’re on the stage)</li>
+            <li>Use the magnifying glass to zoom in if it’s fiddly</li>
+            <li>If the sprite looks ‘wonky’ when moving, re-centre it on the crosshair</li>
+</ul>
 
           <div class="alert">
             If it isn’t centred, your sprite will move “wonky”.
@@ -239,7 +253,12 @@
             <li>Motion: <strong>point in direction</strong></li>
             <li>Control: <strong>forever</strong> → Motion: <strong>move 2 steps</strong></li>
             <li>Four <strong>IF</strong> blocks (not nested) for arrow keys → change direction</li>
-          </ul>
+          
+            <li>Move the sprite to your start position in the <strong>Code</strong> window (not in Costumes)</li>
+            <li>Use the <strong>go to x/y</strong> block so it always resets to the same start point</li>
+            <li>If it’s too fast, lower the move steps number (e.g., 2)</li>
+            <li>Duplicate the IF blocks and snap them <strong>directly underneath</strong> (don’t put them inside each other)</li>
+</ul>
 
           <div class="alert">
             Don’t put the arrow-key IF blocks inside each other. Stack them underneath.
@@ -284,7 +303,12 @@
             <li>Walls: one wall colour (same across all levels)</li>
             <li>Finish: different colour square at the end of each level</li>
             <li>Levels should get harder each time</li>
-          </ul>
+          
+            <li>Wall colour must be <strong>different</strong> to your sprite colour (or it will constantly reset later)</li>
+            <li>Keep the <strong>same wall colour</strong> across all levels (don’t add extra colours to the walls)</li>
+            <li>Use arrow keys to nudge shapes into position neatly</li>
+            <li>Test each level: can your sprite actually fit through the gaps?</li>
+</ul>
 
           <label class="check"><input type="checkbox"> I have 3 backdrops named Level 1–3</label>
         </div>
@@ -312,7 +336,7 @@
       </div>
 
       <div class="quick-links">
-        <a class="btn video-btn" href="https://www.youtube.com/watch?v=FvWCJ98TyqM&t=178s" target="_blank" rel="noopener">
+        <a class="btn video-btn" href="https://www.youtube.com/watch?v=FvWCJ98TyqM&t=130s" target="_blank" rel="noopener">
           ▶ Video 3 help (Broadcasts)
         </a>
       </div>
@@ -324,7 +348,12 @@
             <li>IF touching <strong>wall colour</strong> → go back to start</li>
             <li>IF touching <strong>finish colour</strong> → broadcast Level 2/3/Winner</li>
             <li>Use the <strong>pipette</strong> to pick colours exactly</li>
-          </ul>
+          
+            <li>Add broadcasts: <strong>Level 2</strong>, <strong>Level 3</strong>, and <strong>Winner</strong> (create new message each time)</li>
+            <li>After broadcasting: <strong>wait 1 second</strong> → <strong>go to start</strong> → <strong>switch backdrop</strong></li>
+            <li>Create receiver scripts: <strong>when I receive Level 2</strong> and <strong>when I receive Level 3</strong></li>
+            <li>For colour checks: click the colour square → use the <strong>pipette</strong> (don’t try to match it by eye)</li>
+</ul>
 
           <label class="check"><input type="checkbox"> Touching wall resets correctly</label>
         </div>
@@ -352,7 +381,7 @@
       </div>
 
       <div class="quick-links">
-        <a class="btn video-btn" href="https://www.youtube.com/watch?v=FvWCJ98TyqM&t=780s" target="_blank" rel="noopener">
+        <a class="btn video-btn" href="https://www.youtube.com/watch?v=FvWCJ98TyqM&t=34s" target="_blank" rel="noopener">
           ▶ Video 3 help (Winner screen)
         </a>
       </div>
@@ -363,7 +392,11 @@
             <li>Create new backdrop: <strong>Winner</strong></li>
             <li>Text tool: write “WINNER”</li>
             <li>On Winner broadcast: switch backdrop → wait 4 seconds → switch back to Level 1</li>
-          </ul>
+          
+            <li>Rename the backdrop to <strong>Winner</strong> (so it matches your code dropdown)</li>
+            <li>After switching to Winner: <strong>wait 4 seconds</strong> so the player can see their result</li>
+            <li>Then switch back to <strong>Level 1</strong> so the game restarts</li>
+</ul>
 
           <label class="check"><input type="checkbox"> Winner screen appears then resets</label>
         </div>
@@ -391,7 +424,7 @@
       </div>
 
       <div class="quick-links">
-        <a class="btn video-btn" href="https://www.youtube.com/watch?v=r50jms-jWxw&t=308s" target="_blank" rel="noopener">
+        <a class="btn video-btn" href="https://www.youtube.com/watch?v=r50jms-jWxw&t=40s" target="_blank" rel="noopener">
           ▶ Video 4 help (Obstacles)
         </a>
       </div>
@@ -404,7 +437,11 @@
             <li>When I receive Level 1 → hide</li>
             <li>When I receive Level 2 → show + spin (slowly)</li>
             <li>When I receive Level 3 / Winner → hide</li>
-          </ul>
+          
+            <li>At the top of your main code: <strong>broadcast Level 1</strong> (so obstacles know the game has started)</li>
+            <li>On obstacles: <strong>Level 1 hide</strong>, <strong>Level 2 show</strong>, <strong>Level 3 hide</strong>, <strong>Winner hide</strong></li>
+            <li>Make it fair: slow the spin (e.g., turn 1 degree)</li>
+</ul>
 
           <label class="check"><input type="checkbox"> Obstacle shows only on the right level</label>
         </div>
@@ -444,7 +481,11 @@
             <li>At start: <strong>set Score to 0</strong></li>
             <li>At each finish: <strong>change Score by 1</strong></li>
             <li>Challenge: Why might it not reset after Winner?</li>
-          </ul>
+          
+            <li>Make sure <strong>set score to 0</strong> is under the green flag</li>
+            <li>Put <strong>change score by 1</strong> inside each finish-colour IF block (before long waits)</li>
+            <li>Challenge: if score doesn’t reset after Winner, where else could you set it back to 0?</li>
+</ul>
 
           <label class="check"><input type="checkbox"> Score increases each level</label>
         </div>
@@ -524,6 +565,41 @@
       document.body.classList.remove("no-scroll");
     }
   });
+</script>
+
+<!-- Lightbox Modal -->
+<div id="lbOverlay" class="lb-overlay" aria-hidden="true">
+  <button type="button" class="lb-close" aria-label="Close infographic" onclick="closeLightbox(event)">×</button>
+  <img src="img/infographic.png" class="lb-img" alt="Infographic enlarged">
+</div>
+
+<script>
+(function () {
+  const overlay = document.getElementById('lbOverlay');
+
+  window.openLightbox = function () {
+    overlay.classList.add('is-open');
+    overlay.setAttribute('aria-hidden', 'false');
+  };
+
+  window.closeLightbox = function (e) {
+    if (e) e.stopPropagation();
+    overlay.classList.remove('is-open');
+    overlay.setAttribute('aria-hidden', 'true');
+  };
+
+  // Close if you click the dark background (but NOT the image)
+  overlay.addEventListener('click', function (e) {
+    if (e.target === overlay) window.closeLightbox(e);
+  });
+
+  // ESC to close
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && overlay.classList.contains('is-open')) {
+      window.closeLightbox(e);
+    }
+  });
+})();
 </script>
 
 </body>
