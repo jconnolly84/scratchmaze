@@ -5,6 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Scratch Maze Game – Digital Worksheet</title>
   <link rel="stylesheet" href="./style.css">
+
+<style>
+  /* Extension challenges (Step 11) */
+  .ext-tier{ margin: 18px 0 10px; }
+  .ext-details{ border:1px solid rgba(0,0,0,0.10); border-radius:12px; padding:10px 12px; background: rgba(255,255,255,0.02); margin:10px 0; }
+  .ext-details summary{ cursor:pointer; font-weight:700; }
+  .ext-details[open]{ box-shadow: 0 0 0 3px rgba(56,189,248,0.15); }
+  code.k{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace;
+          padding: 0.12em 0.35em; border-radius: 8px; border: 1px solid rgba(148,163,184,0.35);
+          background: rgba(15,26,46,0.30); }
+</style>
 </head>
 
 <body>
@@ -508,6 +519,206 @@
       </div>
     </div>
   </section>
+
+
+  <!-- STEP 11 -->
+  <section class="step" data-title="Extension challenges">
+    <div class="card">
+      <div class="card-head">
+        <div class="num">11</div>
+        <div>
+          <h2>Extension Challenges (Choose Your Own)</h2>
+          <p class="lead">Add one extra feature using <strong>variables</strong> and <strong>IF statements</strong>. Test and debug it properly.</p>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div>
+          <div class="alert" style="margin-bottom:18px"><strong>Extension tasks:</strong> Choose <strong>one</strong> challenge and finish it properly (then move up a tier). Keep testing so your maze still works.</div>
+<h3 class="ext-tier">Bronze (Accessible)</h3>
+
+    <details class="ext-details">
+      <summary>🟩 <strong>Key and Door (Single Level)</strong> — Add a key that must be collected before the door lets you finish the level.</summary>
+      <div class="ext-body">
+        <ul class=\"bullets\">
+<li>Create a <strong>key sprite</strong>.</li>
+<li>Create a variable called <code class="k">has key</code> (for all sprites).</li>
+<li>When the player touches the key:
+                <ul class=\"bullets\">
+<li>Hide the key</li>
+<li>Set <code class="k">has key</code> to <code class="k">yes</code></li>
+</ul>
+</li>
+<li>At the door:
+                <ul class=\"bullets\">
+<li>If touching door <strong>and</strong> <code class="k">has key = yes</code> → finish the level</li>
+<li>Else say: “You need the key!” (optional)</li>
+</ul>
+</li>
+</ul>
+        <div class="alert" style="margin-top:12px"><strong>Hint:</strong> If your door won’t open, check you set has key to yes when you touch the key, and reset it back to no when you restart or change level.</div>
+        <label class="check" style="margin-top:14px"><input type="checkbox"> I completed this challenge</label>
+      </div>
+    </details>
+    
+
+    <details class="ext-details">
+      <summary>🟩 <strong>Timer Challenge</strong> — Add a countdown timer. Reach the exit before time runs out.</summary>
+      <div class="ext-body">
+        <ul class=\"bullets\">
+<li>Create a variable called <code class="k">time</code>.</li>
+<li>At level start, set <code class="k">time</code> to 30 (or 20).</li>
+<li>Create a timer script:
+                <ul class=\"bullets\">
+<li>Repeat until finished:
+                    <ul class=\"bullets\">
+<li>Wait 1 second</li>
+<li>Change <code class="k">time</code> by -1</li>
+<li>If <code class="k">time = 0</code> → broadcast <code class="k">restart</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+        <div class="alert" style="margin-top:12px"><strong>Hint:</strong> If the timer goes down too fast, you might have started it twice. Keep the countdown in one place (one sprite / one script).</div>
+        <label class="check" style="margin-top:14px"><input type="checkbox"> I completed this challenge</label>
+      </div>
+    </details>
+    
+<h3 class="ext-tier">Silver (Requires planning)</h3>
+
+    <details class="ext-details">
+      <summary>🟦 <strong>Enemy That Moves (Patrol)</strong> — Add an enemy that patrols and sends the player back if touched.</summary>
+      <div class="ext-body">
+        <ul class=\"bullets\">
+<li>Create an enemy sprite (simple shape is fine).</li>
+<li>Make it move left/right (or up/down) in a loop.</li>
+<li>Use wall detection to turn around:
+                <ul class=\"bullets\">
+<li>If touching wall colour → turn 180 degrees</li>
+</ul>
+</li>
+<li>If the enemy touches the player → broadcast <code class="k">restart</code>.</li>
+</ul>
+        <div class="alert" style="margin-top:12px"><strong>Hint:</strong> Keep the enemy code on the enemy sprite. That makes it easier to fix if something breaks.</div>
+        <label class="check" style="margin-top:14px"><input type="checkbox"> I completed this challenge</label>
+      </div>
+    </details>
+    
+
+    <details class="ext-details">
+      <summary>🟦 <strong>Destructible Wall</strong> — Add a wall that disappears only after collecting an item (switch / bomb / button).</summary>
+      <div class="ext-body">
+        <ul class=\"bullets\">
+<li>Create a wall sprite that blocks a shortcut.</li>
+<li>Create a switch/bomb/button sprite somewhere else.</li>
+<li>Create a variable <code class="k">wall open</code> set to <code class="k">no</code> at level start.</li>
+<li>When player touches the switch:
+                <ul class=\"bullets\">
+<li>Set <code class="k">wall open</code> to <code class="k">yes</code></li>
+<li>Hide the switch (optional)</li>
+</ul>
+</li>
+<li>Wall sprite checks:
+                <ul class=\"bullets\">
+<li>If <code class="k">wall open = yes</code> → hide</li>
+<li>Else → show</li>
+</ul>
+</li>
+</ul>
+        <div class="alert" style="margin-top:12px"><strong>Hint:</strong> If the wall stays gone (or never disappears), check your variable. Reset wall open when you restart or when the level starts.</div>
+        <label class="check" style="margin-top:14px"><input type="checkbox"> I completed this challenge</label>
+      </div>
+    </details>
+    
+<h3 class="ext-tier">Gold (Stretch / mastery)</h3>
+
+    <details class="ext-details">
+      <summary>🟨 <strong>Multiple Keys, Multiple Doors</strong> — Add more than one key and door pair (e.g., red key opens red door).</summary>
+      <div class="ext-body">
+        <ul class=\"bullets\">
+<li>Option A: make variables <code class="k">red key</code>, <code class="k">blue key</code> (values yes/no).</li>
+<li>Option B: make one variable <code class="k">key</code> (values none/red/blue).</li>
+<li>Each door checks the matching condition before allowing progress.</li>
+<li>Reset your key variables when restarting or changing level.</li>
+</ul>
+        <div class="alert" style="margin-top:12px"><strong>Hint:</strong> If a door opens when it shouldn’t, double-check your IF condition and your variable names. Reset your key variables when you restart.</div>
+        <label class="check" style="margin-top:14px"><input type="checkbox"> I completed this challenge</label>
+      </div>
+    </details>
+    
+
+    <details class="ext-details">
+      <summary>🟨 <strong>Enemy With “AI” Behaviour</strong> — Create an enemy that follows the player when nearby (otherwise it patrols).</summary>
+      <div class="ext-body">
+        <ul class=\"bullets\">
+<li>Enemy runs a loop forever.</li>
+<li>If <code class="k">distance to player &lt; 120</code>:
+                <ul class=\"bullets\">
+<li>Point towards player</li>
+<li>Move slowly (e.g., 1–2 steps)</li>
+</ul>
+</li>
+<li>Else:
+                <ul class=\"bullets\">
+<li>Patrol like a normal enemy (turn at walls)</li>
+</ul>
+</li>
+<li>If touching player → broadcast <code class="k">restart</code>.</li>
+</ul>
+        <div class="alert" style="margin-top:12px"><strong>Hint:</strong> Start simple: make it chase first. If that works, then add patrol behaviour when the player is far away.</div>
+        <label class="check" style="margin-top:14px"><input type="checkbox"> I completed this challenge</label>
+      </div>
+    </details>
+    
+<h3 class="ext-tier">Platinum (Open-ended)</h3>
+
+    <details class="ext-details">
+      <summary>🟪 <strong>Choice-Based Maze (Fork with Consequences)</strong> — Add a fork in the maze where each path has different risks or rewards.</summary>
+      <div class="ext-body">
+        <ul class=\"bullets\">
+<li>Path A is shorter but has an enemy; Path B is longer but safe.</li>
+<li>Path A contains the key; Path B is a shortcut but needs the key later.</li>
+<li>Path A gives bonus points; Path B removes time from the timer.</li>
+</ul>
+        <div class="alert" style="margin-top:12px"><strong>Hint:</strong> Playtest both routes. Does one path feel unfair? If so, tweak the risk/reward and test again.</div>
+        <label class="check" style="margin-top:14px"><input type="checkbox"> I completed this challenge</label>
+      </div>
+    </details>
+    
+
+    <details class="ext-details">
+      <summary>🟪 <strong>Self-Check (Use for Any Challenge)</strong> — Use this checklist to prove your extension is complete.</summary>
+      <div class="ext-body">
+        <ul class='bullets'><li>My maze still works (movement + walls + finish).</li><li>I tested my new feature at least 3 times.</li><li>I can explain which variable(s) I used and what they store.</li><li>I can explain at least one condition (IF) in my code.</li><li>I reset everything properly on restart / new level.</li></ul>
+        
+        <label class="check" style="margin-top:14px"><input type="checkbox"> I completed this challenge</label>
+      </div>
+    </details>
+    
+        </div>
+
+        <figure class="shot">
+          <div class="shot-top">
+            <span>Teacher note</span>
+            <span class="file">Extension tasks</span>
+          </div>
+          <div style="padding:14px">
+            <p style="margin-top:0"><strong>Success criteria:</strong></p>
+            <ul class="bullets">
+              <li>Your original maze still works (movement + walls + finish + levels).</li>
+              <li>Your new feature is reliable (tested at least 3 times).</li>
+              <li>You can explain your code using: <strong>variable</strong>, <strong>condition</strong>, <strong>broadcast</strong>, <strong>loop</strong>.</li>
+            </ul>
+            <div class="alert" style="margin-top:12px">
+              If it breaks, undo your last change and try again. One change at a time.
+            </div>
+          </div>
+        </figure>
+      </div>
+    </div>
+  </section>
+
 
 </main>
 
